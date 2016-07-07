@@ -26,6 +26,11 @@ $ docker run -it --name tensorflow-android ornew/tensorflow-android bash
 ```sh
 $ docker start tensorflow-android
 $ docker attach tensorflow-android
+# mkdir ~/demo
+# cd ~/demo
+# git clone https://github.com/tensorflow/tensorflow.git
+# cd tensorflow
+# patch -u WORKSPACE < ~/WORKSPACE.20160705.diff
 # echo y | android update sdk -u -t "android-23"
 # wget https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip -O /tmp/inception5h.zip
 # unzip /tmp/inception5h.zip -d tensorflow/examples/android/assets/
@@ -35,12 +40,17 @@ $ docker attach tensorflow-android
 
 ### You get .apk
 
-You should mount host volume. Use docker run `-v <MOUNT_HOST_PATH>:<MOUNT_CONT_PATH>` option.
+You should mount host volume when new container ran. Use docker run `-v <MOUNT_HOST_PATH>:<MOUNT_CONT_PATH>` option.
 
 ```sh
 $ docker pull ornew/tensorflow-android
 $ docker run -it --name tensorflow-android -v /tmp/tf/apk:/usr/local/tf/ ornew/tensorflow-android bash
 # ~setup.sh
+# mkdir ~/demo
+# cd ~/demo
+# git clone https://github.com/tensorflow/tensorflow.git
+# cd tensorflow
+# patch -u WORKSPACE < ~/WORKSPACE.20160705.diff
 # echo y | android update sdk -u -t "android-23"
 # wget https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip -O /tmp/inception5h.zip
 # unzip /tmp/inception5h.zip -d tensorflow/examples/android/assets/
