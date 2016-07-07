@@ -2,7 +2,7 @@
 
 Base on https://github.com/tensorflow/tensorflow/
 
-The repository is base-code to use a tensorflow model data on Android.
+The repository is setup to use a tensorflow model data on Android.
 
 Docker Hub: https://hub.docker.com/r/ornew/tensorflow-android/
 
@@ -11,6 +11,8 @@ Docker Hub: https://hub.docker.com/r/ornew/tensorflow-android/
 Recommend: Use Docker.
 
 You need installed Docker.
+
+Docker: https://www.docker.com/
 
 ```sh
 $ docker pull ornew/tensorflow-android
@@ -24,6 +26,7 @@ $ docker run -it --name tensorflow-android ornew/tensorflow-android bash
 ```sh
 $ docker start tensorflow-android
 $ docker attach tensorflow-android
+# echo y | android update sdk -u -t "android-23"
 # wget https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip -O /tmp/inception5h.zip
 # unzip /tmp/inception5h.zip -d tensorflow/examples/android/assets/
 # bazel build //tensorflow/examples/android:tensorflow_demo
@@ -38,6 +41,7 @@ You should mount host volume. Use docker run `-v <MOUNT_HOST_PATH>:<MOUNT_CONT_P
 $ docker pull ornew/tensorflow-android
 $ docker run -it --name tensorflow-android -v /tmp/tf/apk:/usr/local/tf/ ornew/tensorflow-android bash
 # ~setup.sh
+# echo y | android update sdk -u -t "android-23"
 # wget https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip -O /tmp/inception5h.zip
 # unzip /tmp/inception5h.zip -d tensorflow/examples/android/assets/
 # bazel build //tensorflow/examples/android:tensorflow_demo
