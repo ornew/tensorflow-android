@@ -22,7 +22,7 @@ $ docker run -it --name tensorflow-android ornew/tensorflow-android bash
 
 ## Official Demo App Build
 
-If exited you attach container by following command.
+If exited, attach container by following command.
 
 ```sh
 $ docker start tensorflow-android
