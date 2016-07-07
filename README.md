@@ -32,7 +32,6 @@ $ docker attach tensorflow-android
 You execute `build_demo.sh`:
 
 ```sh
-# chmod u+x ~/build_demo.sh
 # ~/build_demo.sh
 ```
 
