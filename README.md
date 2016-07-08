@@ -41,6 +41,7 @@ $ docker run -it --name tensorflow-android -v /tmp/tf/apk/:/usr/local/tf/ ornew/
 ~/# setup.sh
 ~/# demo/build.sh
 ~/# cp demo/tensorflow/bazel-bin/tensorflow/examples/android/tensorflow_demo.apk /usr/local/tf/
+~/# exit
 $ cd /tmp/tf/apk/
 $ ls
 tensorflow_demo.apk
