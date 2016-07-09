@@ -8,6 +8,7 @@ BAZEL_GPG_URL=https://storage.googleapis.com/bazel-apt/doc/apt-key.pub.gpg
 cat >> ~/.bashrc <<'EOF'
 
 # http://github.com/ornew/tensorflow-android
+export ORNEW_HOME=~/ornew
 DK_INS_DIR=/usr/local/bin
 export ANDROID_HOME=${DK_INS_DIR}/android-sdk-linux
 export ANDROID_NDK_HOME=${DK_INS_DIR}/android-ndk-r12b

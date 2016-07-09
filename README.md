@@ -18,16 +18,16 @@ Docker: https://www.docker.com/
 ```sh
 $ docker pull ornew/tensorflow-android
 $ docker run -it ornew/tensorflow-android
-~/# bash install
-~/# source ~/.bashrc
+# bash install
+# source ~/.bashrc
 ```
 
 ## Official Demo App Build
 
-You execute `~/demo/build.sh` on shell in docker:
+You execute `bash demo/build` on shell in docker:
 
 ```sh
-~/# demo/build.bash
+# bash demo/build
 ```
 
 ### You get .apk
@@ -39,11 +39,11 @@ Example:
 ```sh
 $ docker pull ornew/tensorflow-android
 $ docker run -it -v /tmp/tf/apk/:/usr/local/tf/ ornew/tensorflow-android
-~/# bash install
-~/# source ~/.bashrc
-~/# bash demo/build
-~/# cp demo/tensorflow/bazel-bin/tensorflow/examples/android/tensorflow_demo.apk /usr/local/tf/
-~/# exit
+# bash install
+# source ~/.bashrc
+# bash demo/build
+# cp ~/ornew/tensorflow-android/demo/tensorflow/bazel-bin/tensorflow/examples/android/tensorflow_demo.apk /usr/local/tf/
+# exit
 $ cd /tmp/tf/apk/
 $ ls
 tensorflow_demo.apk

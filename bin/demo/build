@@ -1,11 +1,10 @@
 #!/bin/bash
 
-cd ~
-mkdir demo
-cd demo
+ORNEW_TA_HOME=${ORNEW_HOME}/tensorflow-android
+cd ${ORNEW_TA_HOME}/demo
 git clone https://github.com/tensorflow/tensorflow.git
 cd tensorflow
-patch -u WORKSPACE < ~/demo/WORKSPACE.20160705.diff
+patch -u WORKSPACE < ${ORNEW_TA_HOME}/demo/WORKSPACE.20160705.diff
 echo y | android update sdk -u -t "android-23"
 echo y | android update sdk -u -t "build-tools-24.0.0"
 wget https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip -O /tmp/inception5h.zip
