@@ -17,8 +17,9 @@ Docker: https://www.docker.com/
 
 ```sh
 $ docker pull ornew/tensorflow-android
-$ docker run -it --name tensorflow-android ornew/tensorflow-android bash
-~/# setup.sh
+$ docker run -it ornew/tensorflow-android
+~/# bash install
+~/# source ~/.bashrc
 ```
 
 ## Official Demo App Build
@@ -26,7 +27,7 @@ $ docker run -it --name tensorflow-android ornew/tensorflow-android bash
 You execute `~/demo/build.sh` on shell in docker:
 
 ```sh
-~/# demo/build.sh
+~/# demo/build.bash
 ```
 
 ### You get .apk
@@ -37,9 +38,10 @@ Example:
 
 ```sh
 $ docker pull ornew/tensorflow-android
-$ docker run -it --name tensorflow-android -v /tmp/tf/apk/:/usr/local/tf/ ornew/tensorflow-android bash
-~/# setup.sh
-~/# demo/build.sh
+$ docker run -it -v /tmp/tf/apk/:/usr/local/tf/ ornew/tensorflow-android
+~/# bash install
+~/# source ~/.bashrc
+~/# bash demo/build
 ~/# cp demo/tensorflow/bazel-bin/tensorflow/examples/android/tensorflow_demo.apk /usr/local/tf/
 ~/# exit
 $ cd /tmp/tf/apk/
