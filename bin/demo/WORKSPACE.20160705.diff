@@ -21,12 +21,12 @@
 +    api_level = 23,
 +    build_tools_version = "24.0.0",
 +    # Replace with path to Android SDK on your system
-+    path = "/opt/android-sdk-linux/",
++    path = "/usr/local/bin/android-sdk-linux/",
 +)
 +
 +android_ndk_repository(
 +    name="androidndk",
-+    path="/opt/android-ndk-r12b/",
++    path="/usr/local/bin/android-ndk-r12b/",
 +    api_level=21)
  
  # Please add all new TensorFlow dependencies in workspace.bzl.
