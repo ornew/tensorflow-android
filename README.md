@@ -4,7 +4,8 @@ Base on https://github.com/tensorflow/tensorflow/
 
 The repository is setup to use a tensorflow model data on Android.
 
-Docker Hub: https://hub.docker.com/r/ornew/tensorflow-android/
+- GitHub: https://github.com/ornew/tensorflow-android
+- DockerHub: https://hub.docker.com/r/ornew/tensorflow-android/
 
 ## Usage
 
@@ -61,3 +62,9 @@ apt-get参照リポジトリを国内リポジトリに変更すると爆速に�
 ```sh
 # sed -i.bak -e "s%http://archive.ubuntu.com/ubuntu/%http://ftp.iij.ad.jp/pub/linux/ubuntu/archive/%g" /etc/apt/sources.list
 ```
+
+## Author @ornew
+
+> 古川新 (Arata Furukawa)  
+> email: old.river.new@gmail.com  
+> URL: http://ornew.net/
