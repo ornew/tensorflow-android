@@ -19,7 +19,7 @@ Docker: https://www.docker.com/
 $ docker pull ornew/tensorflow-android
 $ docker run -it ornew/tensorflow-android
 # bash install
-# source ~/.bashrc
+# . ~/.bashrc
 ```
 
 ## Official Demo App Build
@@ -40,7 +40,7 @@ Example:
 $ docker pull ornew/tensorflow-android
 $ docker run -it -v /tmp/tf/apk/:/usr/local/tf/ ornew/tensorflow-android
 # bash install
-# source ~/.bashrc
+# . ~/.bashrc
 # bash demo/build
 # cp ~/ornew/tensorflow-android/demo/tensorflow/bazel-bin/tensorflow/examples/android/tensorflow_demo.apk /usr/local/tf/
 # exit
@@ -50,7 +50,12 @@ tensorflow_demo.apk
 $ adb install -r -g ./tensorflow_demo.apk
 ```
 
-### 日本国内で実行する場合(For Japanese)
+## Performance improvement
+
+1. Use `--net=host`
+2. Use `-v $(pwd)/bin:/root`
+
+## For Japanese
 apt-get参照リポジトリを国内リポジトリに変更すると爆速になるので、`bash install`の前に以下のコマンドを実行してみてください。
 
 ```sh
