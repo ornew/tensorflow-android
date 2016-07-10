@@ -9,7 +9,7 @@ Docker Hub: https://hub.docker.com/r/ornew/tensorflow-android/
 ## Usage
 
 I recommend that you use Docker. (However, if you clone from this repository
-on Ubuntu, you execute `setup.sh` and copy the `share` directory anywhere.)
+on Ubuntu, you execute `bash install` and copy the `bin` directory anywhere.)
 
 You installed Docker.
 
@@ -48,4 +48,11 @@ $ cd /tmp/tf/apk/
 $ ls
 tensorflow_demo.apk
 $ adb install -r -g ./tensorflow_demo.apk
+```
+
+### 日本国内で実行する場合(For Japanese)
+apt-get参照リポジトリを国内リポジトリに変更すると爆速になるので、`bash install`の前に以下のコマンドを実行してみてください。
+
+```sh
+# sed -i.bak -e "s%http://archive.ubuntu.com/ubuntu/%http://ftp.iij.ad.jp/pub/linux/ubuntu/archive/%g" /etc/apt/sources.list
 ```
