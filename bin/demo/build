@@ -1,7 +1,7 @@
 #!/bin/bash
 
 SDK_API_VERSION=23
-BUILD_TOOLS_VERSION=24.0.0
+BUILD_TOOLS_VERSION=24.0.1
 ORNEW_TA_HOME=${ORNEW_HOME}/tensorflow-android
 cd ${ORNEW_TA_HOME}/demo
 git clone https://github.com/tensorflow/tensorflow.git
