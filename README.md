@@ -57,10 +57,20 @@ $ adb install -r -g ./tensorflow_demo.apk
 2. Use `-v $(pwd)/bin:/root`
 
 ## For Japanese
-apt-get参照リポジトリを国内リポジトリに変更すると爆速になるので、`bash install`の前に以下のコマンドを実行してみてください。
+apt-get参照リポジトリを国内リポジトリに変更すると爆速になるので、
+`bash install`の前に以下のコマンドを実行してみてください。
+本家のアーカイブのアップデート直後など、タイミングが悪いと
+ハッシュチェックに失敗することがありますがその時は
+別のリポジトリを試してください。
 
 ```sh
 # sed -i.bak -e "s%http://archive.ubuntu.com/ubuntu/%http://ftp.iij.ad.jp/pub/linux/ubuntu/archive/%g" /etc/apt/sources.list
+```
+
+or
+
+```sh
+# sed -i.bak -e "s%http://archive.ubuntu.com/ubuntu/%http://ftp.jaist.ac.jp/pub/Linux/ubuntu/%g" /etc/apt/sources.list
 ```
 
 ## Author @ornew
